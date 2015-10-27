@@ -1,0 +1,627 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+.mobile-only {
+	display:none;
+}
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+
+}
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap,
+.woocommerce-page #container,
+.woocommerce-page .woocommerce-container {
+	max-width: 1240px;
+	margin:0 auto;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+//#inner-header {position:relative;background:#efefef;}
+
+.header,
+.archive.games .header {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:1000;
+	background:$white;
+}
+
+.games .header {
+	position:relative;
+}
+
+.admin-bar .header,
+.archive.games.admin-bar .header {
+	top:30px;
+}
+
+	#logo {
+		margin-left:-12px;
+		a {
+			margin:0;
+		}
+	}
+
+	#facebook-header {
+		position:absolute;
+		top:-40px;
+		right:70px;
+		width:200px;
+		text-align:right;
+		//background:red;
+	}
+
+
+.header .social-icons {
+	text-align:right;
+	position:absolute;
+	top:-120px;
+	right:0px;
+}
+
+.social-icons {
+
+	li {
+		margin-bottom:0px;
+
+	}
+}
+
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.navigation-outer {
+	display:block;
+}
+
+.nav {
+	border: 0;
+	ul {
+		background:$green;
+		margin-top:0;
+	}
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+			padding: 0.75em;
+			text-transform:uppercase;
+			font-family:$serif-headers;
+			font-weight:bold;
+			letter-spacing:2px;
+			font-size:16px;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $white;
+				text-decoration: none;
+				background: darken($green,10%);
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding:10px 0 10px 12px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					font-size:13px;
+					line-height:17px;
+					border-bottom: 1px solid #ccc;
+					text-transform:none;
+					letter-spacing:1px;
+
+
+					&:hover,
+					&:focus {
+						//text-decoration:none;
+						
+					}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		> a {background: darken($green,10%);}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+#container-main,
+.archive.games #container-main,
+.archive.games.admin-bar #container-main {
+	padding-top:180px;
+}
+
+.admin-bar {
+	#container-main {
+		padding-top:180px;
+	}
+}
+
+.games #container-main,
+.games.admin-bar #container-main {
+	padding-top:0px;
+}
+
+.games #inner-content {
+	padding-top:50px;
+}
+
+.archive.games #inner-content {
+	padding-top:0px;
+}
+
+
+/*********************
+SPECIFIC PAGES & CONTENT AREAS
+*********************/
+.home-blog-feed {
+	.fourcol {
+		width:31.491712705%;
+		margin-right:0px;
+		float:right;
+	}
+}
+
+.home-blog-feed2 {
+	h3 {
+		//min-height:60px;
+	}
+	.post-image {
+		width:100%;
+	}
+}
+
+#instagram-photos {
+	.instagram-content {
+		width:19.99%; // 5 per row
+		//width:33.33%; // 3 per row
+		&.tag-9 {
+			display:block;
+			* {
+				display:inline;
+			}
+		}
+	}
+}
+
+
+
+#instagram-feed {
+
+}
+
+#pinterest-feed {
+	h2 {
+		text-align:center;
+		a {
+			float:left;
+		}
+	}
+}
+
+#pinterest-feed .pins-feed-list {
+	.pins-feed-item {
+		width:16.66% !important;
+	}
+}
+
+#pinterest-feed,
+#instagram-feed {
+	h2 {
+		span, i {
+			position:absolute;
+		}
+		span {
+			right:6px;
+			top:5px;
+			//font-size:44px;	
+		}
+		i {
+			left:6px;
+			top:3px;
+			font-size:44px;	
+		}
+	}
+}
+
+
+.woocommerce-page.columns-5 ul.products li.product, 
+.woocommerce.columns-5 ul.products li.product { 
+	width:16.5%;
+}
+
+
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product {
+	padding:0;
+	font-size:12px;
+	text-align:center;
+	img {
+		display:block;
+		margin:0;
+	}
+
+	h3 {
+		
+	}
+
+	.price {
+		
+	}
+
+	.button {
+		
+	}
+}
+
+.callout,
+.woocommerce-container #content .summary {
+
+blockquote {
+	.alignright {
+		float:right;
+		margin-left:18px;
+	}
+}
+
+}
+
+.callout {
+	width:30%;
+	&.alignright {
+		float:right;
+	}
+}
+
+div.related.products {
+	clear:both;
+}
+
+div#container-main > div.woocommerce-container div.related.products {
+	width:100%;
+}
+
+
+.gallery-item {
+		float:left;
+		img {
+			border:1px solid #eeeeee;
+
+		}
+	}
+
+.gallery-columns-3 .gallery-item {
+		width:33.3%;
+	}
+
+.gallery-columns-4 .gallery-item {
+		width:24.9%;
+	}
+
+.blog,
+.archive {
+	.feed-item {
+		overflow:hidden;
+		border-bottom:1px solid #cccccc;
+		margin-bottom:18px;
+	}
+
+	.category-description {
+		max-width:700px;
+		padding:0 0 6px 0;
+		margin: 0 0 24px 0;
+		border-bottom:1px solid #cccccc;
+	}
+}
+
+.blog-featured {
+	padding-right:20px;
+	img {
+		max-width:100%;
+		height:auto;
+		border:1px solid #666;
+		padding:3px;
+		margin:16px 0 24px 0;
+	}
+}
+
+
+
+
+/**********************************************/
+/**********************************************/
+/* PUZZLE GAME */
+/**********************************************/
+/**********************************************/
+
+.single.puzzle {
+	.the-content,
+	#puzzle-instructions {
+		max-width:600px;
+		margin:0 auto;
+	}
+
+}
+
+// .postid-2669 header.header #inner-header .wrap {
+// 	background-image:url(../images/usa-village-70.jpg);
+// 	background-position: 280px 61px;
+// 	background-repeat:repeat-x;
+// }
+
+#matching-game {
+
+	&.landscape .matching-image{
+		height:80px;
+	}
+
+	
+	.matching-image,
+	&.portrait .matching-image {
+		height:100px;
+	}
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+.single.games .sidebar {
+	.widget {
+		width:33.33%;
+		float:left;
+	}
+
+	.widget:nth-child(3n+4) {  
+  		clear:both;
+	}
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.15em;
+
+				&:first-child {}
+				&:last-child {}
+				a:hover {
+					text-decoration:none;
+				}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+
+.single-comments.sixcol {
+	clear:both;
+	margin:0 auto;
+	float:none;
+}
+
+.dgd_stb_box {
+	width:400px !important;
+}
+

@@ -1,0 +1,101 @@
+/*! FORGERY GAME */
+.forgery #content #forgery-game-wrapper {padding:0;}
+.forgery #content #forgery-game-wrapper h4, .forgery #content #forgery-game-wrapper p {text-align:center;}
+.forgery #content #forgery-table-scores {width:100%;margin:0 auto;}
+.forgery #content #forgery-table-scores th, 
+.forgery #content #forgery-table-scores td {text-align:center;font-family:Arial, sans-serif;}
+
+.forgery #content #forgery-table-scores th {
+	background:#7A7650;
+	color:#ffffcc;
+	border-right:1px solid #ffffcc;
+	padding:6px 0;
+}
+
+.forgery #content #forgery-table-scores td {
+	border-right:1px solid #7A7650;
+	padding:6px 0 3px 0;
+	font-size:24px;
+	color:#444;
+
+}
+
+.forgery #content #forgery-table-scores {border-left:1px solid #7A7650;border-bottom:1px solid #7A7650;}
+
+.forgery #content #forgery-table-scores th.border-none, 
+.forgery #content #forgery-table-scores td.border-none {border-right:none;}
+
+.forgery #content #forgery-instructions, 
+.forgery #content #forgery-game-image {width:100%;}
+.forgery #content #forgery-game-image img {width:100%;height:auto;}
+
+.forgery #content #forgery-instructions {text-align:center;}
+
+.forgery #content #forgery-game-image {position:relative;cursor:pointer;padding:0;margin:0;}
+.forgery #content #forgery-game-image img {margin:0;padding:0;display:inline;}
+.forgery #content #forgery-game-image .box {position:absolute;z-index:100;cursor:pointer;margin:0;padding:0;overflow:visible;}
+.forgery #content #forgery-game-image .box span {display:block;position:absolute;top:-30px;left:0px;background:#FFFFFF;padding:3px;color:red;z-index:900;}
+
+.forgery #content .wrong-box {
+	border:1px solid #000;
+	background:#00F;
+	background:#F00;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:11px;
+	text-transform:uppercase;
+	position:absolute;
+	z-index:400;
+}
+
+
+
+.forgery #content #forgery-game-image .box.square {width:5%;height:5%;} /* for square images */
+.forgery #content #forgery-game-image .box.long {width:5%;height:4%;} /* for vertical images */
+.forgery #content #forgery-game-image .box.short {width:4%;height:5%;} /* for horizontal images */
+.forgery #content #forgery-game-image .box.test,
+.forgery #content #forgery-game-image .box.guessed {border:1px solid red;overflow:visible;}
+
+.forgery #content #you-won {
+	width:80%;
+	left:10%;
+	position:absolute;
+	top:30%;
+	text-align:center;
+	font-size:48px;
+	line-height:48px;
+	padding:12px 0px;
+	display:none;
+	background:#7A7650;
+	color:#ffffcc;
+	z-index:600;
+}
+
+.forgery #content #you-won a {text-decoration:underline;}
+
+.forgery #content #answer-buttons {text-align:center;height:40px;overflow:hidden;}
+
+.forgery #content #show-answers,
+.forgery #content #hide-answers {
+	background:#7A7650;
+	color:#ffffcc;
+	display:inline-block;
+	width:150px;
+	padding:3px 0;
+	cursor:pointer;
+	position:relative;
+	margin-top:8px;
+	margin-bottom:8px;
+	
+}
+
+.forgery #content #show-answers {margin-right:-75px;}
+.forgery #content #hide-answers {margin-left:-75px;}
+
+.forgery #content #hide-answers {top:-50px;}
+
+#page-content #show-answers:hover,
+#page-content #hide-answers:hover {text-decoration:underline;}
