@@ -91,6 +91,8 @@
 
 						</main>
 
+						<p>And here is the change.</p>
+
 						<?php get_sidebar(); ?>
 
 				</div>
